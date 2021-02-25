@@ -25,6 +25,7 @@ message APIResponse{
 
 message PayloadRequest{
   string payload = 1;
+  int64 sellerId = 2;
 }
 
 message LogoutRequest{

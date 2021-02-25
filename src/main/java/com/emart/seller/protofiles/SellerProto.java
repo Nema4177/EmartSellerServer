@@ -1235,6 +1235,12 @@ public final class SellerProto {
      */
     com.google.protobuf.ByteString
         getPayloadBytes();
+
+    /**
+     * <code>int64 sellerId = 2;</code>
+     * @return The sellerId.
+     */
+    long getSellerId();
   }
   /**
    * Protobuf type {@code PayloadRequest}
@@ -1286,6 +1292,11 @@ public final class SellerProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               payload_ = s;
+              break;
+            }
+            case 16: {
+
+              sellerId_ = input.readInt64();
               break;
             }
             default: {
@@ -1358,6 +1369,17 @@ public final class SellerProto {
       }
     }
 
+    public static final int SELLERID_FIELD_NUMBER = 2;
+    private long sellerId_;
+    /**
+     * <code>int64 sellerId = 2;</code>
+     * @return The sellerId.
+     */
+    @java.lang.Override
+    public long getSellerId() {
+      return sellerId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1375,6 +1397,9 @@ public final class SellerProto {
       if (!getPayloadBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, payload_);
       }
+      if (sellerId_ != 0L) {
+        output.writeInt64(2, sellerId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1386,6 +1411,10 @@ public final class SellerProto {
       size = 0;
       if (!getPayloadBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, payload_);
+      }
+      if (sellerId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, sellerId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1404,6 +1433,8 @@ public final class SellerProto {
 
       if (!getPayload()
           .equals(other.getPayload())) return false;
+      if (getSellerId()
+          != other.getSellerId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1417,6 +1448,9 @@ public final class SellerProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
       hash = (53 * hash) + getPayload().hashCode();
+      hash = (37 * hash) + SELLERID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSellerId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1552,6 +1586,8 @@ public final class SellerProto {
         super.clear();
         payload_ = "";
 
+        sellerId_ = 0L;
+
         return this;
       }
 
@@ -1579,6 +1615,7 @@ public final class SellerProto {
       public protoFiles.SellerProto.PayloadRequest buildPartial() {
         protoFiles.SellerProto.PayloadRequest result = new protoFiles.SellerProto.PayloadRequest(this);
         result.payload_ = payload_;
+        result.sellerId_ = sellerId_;
         onBuilt();
         return result;
       }
@@ -1630,6 +1667,9 @@ public final class SellerProto {
         if (!other.getPayload().isEmpty()) {
           payload_ = other.payload_;
           onChanged();
+        }
+        if (other.getSellerId() != 0L) {
+          setSellerId(other.getSellerId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1732,6 +1772,37 @@ public final class SellerProto {
   checkByteStringIsUtf8(value);
         
         payload_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long sellerId_ ;
+      /**
+       * <code>int64 sellerId = 2;</code>
+       * @return The sellerId.
+       */
+      @java.lang.Override
+      public long getSellerId() {
+        return sellerId_;
+      }
+      /**
+       * <code>int64 sellerId = 2;</code>
+       * @param value The sellerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerId(long value) {
+        
+        sellerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 sellerId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSellerId() {
+        
+        sellerId_ = 0L;
         onChanged();
         return this;
       }
@@ -4017,22 +4088,23 @@ public final class SellerProto {
     java.lang.String[] descriptorData = {
       "\n\014seller.proto\"\037\n\014LoginRequest\022\017\n\007payloa" +
       "d\030\001 \001(\t\".\n\013APIResponse\022\016\n\006status\030\001 \001(\005\022\017" +
-      "\n\007message\030\002 \001(\t\"!\n\016PayloadRequest\022\017\n\007pay" +
-      "load\030\001 \001(\t\"!\n\rLogoutRequest\022\020\n\010username\030" +
-      "\001 \001(\t\"!\n\rSellerRequest\022\020\n\010sellerId\030\001 \001(\003" +
-      "\"<\n\024SellerRatingResponse\022\020\n\010thumbsUp\030\001 \001" +
-      "(\005\022\022\n\nthumbsDown\030\002 \001(\005\"\'\n\014ListResponse\022\027" +
-      "\n\017responsePayload\030\001 \001(\t2\367\002\n\rSellerServic" +
-      "e\022$\n\005login\022\r.LoginRequest\032\014.APIResponse\022" +
-      ")\n\010register\022\017.PayloadRequest\032\014.APIRespon" +
-      "se\022&\n\006logout\022\016.LogoutRequest\032\014.APIRespon" +
-      "se\0228\n\017getSellerRating\022\016.SellerRequest\032\025." +
-      "SellerRatingResponse\022)\n\010itemSale\022\017.Paylo" +
-      "adRequest\032\014.APIResponse\022,\n\013changePrice\022\017" +
-      ".PayloadRequest\032\014.APIResponse\022+\n\nremoveI" +
-      "tem\022\017.PayloadRequest\032\014.APIResponse\022-\n\014di" +
-      "splayItems\022\016.SellerRequest\032\r.ListRespons" +
-      "eB\031\n\nprotoFilesB\013SellerProtob\006proto3"
+      "\n\007message\030\002 \001(\t\"3\n\016PayloadRequest\022\017\n\007pay" +
+      "load\030\001 \001(\t\022\020\n\010sellerId\030\002 \001(\003\"!\n\rLogoutRe" +
+      "quest\022\020\n\010username\030\001 \001(\t\"!\n\rSellerRequest" +
+      "\022\020\n\010sellerId\030\001 \001(\003\"<\n\024SellerRatingRespon" +
+      "se\022\020\n\010thumbsUp\030\001 \001(\005\022\022\n\nthumbsDown\030\002 \001(\005" +
+      "\"\'\n\014ListResponse\022\027\n\017responsePayload\030\001 \001(" +
+      "\t2\367\002\n\rSellerService\022$\n\005login\022\r.LoginRequ" +
+      "est\032\014.APIResponse\022)\n\010register\022\017.PayloadR" +
+      "equest\032\014.APIResponse\022&\n\006logout\022\016.LogoutR" +
+      "equest\032\014.APIResponse\0228\n\017getSellerRating\022" +
+      "\016.SellerRequest\032\025.SellerRatingResponse\022)" +
+      "\n\010itemSale\022\017.PayloadRequest\032\014.APIRespons" +
+      "e\022,\n\013changePrice\022\017.PayloadRequest\032\014.APIR" +
+      "esponse\022+\n\nremoveItem\022\017.PayloadRequest\032\014" +
+      ".APIResponse\022-\n\014displayItems\022\016.SellerReq" +
+      "uest\032\r.ListResponseB\031\n\nprotoFilesB\013Selle" +
+      "rProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4055,7 +4127,7 @@ public final class SellerProto {
     internal_static_PayloadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PayloadRequest_descriptor,
-        new java.lang.String[] { "Payload", });
+        new java.lang.String[] { "Payload", "SellerId", });
     internal_static_LogoutRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_LogoutRequest_fieldAccessorTable = new

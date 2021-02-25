@@ -90,6 +90,7 @@ public class SellerGrpcHelperService extends SellerServiceGrpc.SellerServiceImpl
         super.itemSale(request, responseObserver);
         try {
             Item item = gson.fromJson(request.getPayload(), Item.class);
+            long sellerId = request.getSellerId();
 
             SellerProto.APIResponse.Builder response = SellerProto.APIResponse.newBuilder();
             response.setStatus(HttpStatus.OK.value()).setMessage("");
@@ -105,7 +106,7 @@ public class SellerGrpcHelperService extends SellerServiceGrpc.SellerServiceImpl
         super.changePrice(request, responseObserver);
         try {
             HashMap<String, Object> payload = gson.fromJson(request.getPayload(), type);
-            long sellerId = (long) payload.get(Constants.response_sellerId_key);
+            long sellerId = request.getSellerId();
             int itemId = (int) payload.get(Constants.request_item_id_key);
             double price = (double) payload.get(Constants.request_item_price_key);
 
@@ -123,7 +124,7 @@ public class SellerGrpcHelperService extends SellerServiceGrpc.SellerServiceImpl
         super.removeItem(request, responseObserver);
         try {
             HashMap<String, Object> payload = gson.fromJson(request.getPayload(), type);
-            long sellerId = (long) payload.get(Constants.response_sellerId_key);
+            long sellerId = request.getSellerId();
             int itemId = (int) payload.get(Constants.request_item_id_key);
             int quantity = (int) payload.get(Constants.request_item_quantity_key);
 

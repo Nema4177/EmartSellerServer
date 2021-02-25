@@ -90,7 +90,8 @@ public class SellerController {
 	public ResponseEntity<JSONObject> addItem(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
-		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder().setPayload(input.toString()).build();
+		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder()
+				.setPayload(input.toString()).setSellerId(sellerId).build();
 		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(4, payloadRequest);
 
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
@@ -100,7 +101,8 @@ public class SellerController {
 	public ResponseEntity<JSONObject> changeSalePrice(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
-		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder().setPayload(input.toString()).build();
+		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder()
+				.setPayload(input.toString()).setSellerId(sellerId).build();
 		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(5, payloadRequest);
 
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
@@ -110,7 +112,8 @@ public class SellerController {
 	public ResponseEntity<JSONObject> removeItem(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
-		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder().setPayload(input.toString()).build();
+		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder()
+				.setPayload(input.toString()).setSellerId(sellerId).build();
 		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(6, payloadRequest);
 
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
