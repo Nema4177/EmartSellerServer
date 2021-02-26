@@ -3,8 +3,8 @@ package com.emart.seller.service;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import org.springframework.stereotype.Service;
-import protoFiles.SellerProto;
-import protoFiles.SellerServiceGrpc;
+import protofiles.SellerServiceGrpc;
+import protofiles.SellerProto;
 
 @Service
 public class SellerGrpcClientService {

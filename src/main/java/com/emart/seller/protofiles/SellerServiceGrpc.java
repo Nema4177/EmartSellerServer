@@ -1,4 +1,4 @@
-package protoFiles;
+package protofiles;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -14,29 +14,29 @@ public final class SellerServiceGrpc {
   public static final String SERVICE_NAME = "SellerService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest,
-      protoFiles.SellerProto.RegisterResponse> getLoginMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.LoginRequest,
+      protofiles.SellerProto.RegisterResponse> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "login",
-      requestType = protoFiles.SellerProto.LoginRequest.class,
-      responseType = protoFiles.SellerProto.RegisterResponse.class,
+      requestType = protofiles.SellerProto.LoginRequest.class,
+      responseType = protofiles.SellerProto.RegisterResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest,
-      protoFiles.SellerProto.RegisterResponse> getLoginMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest, protoFiles.SellerProto.RegisterResponse> getLoginMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.LoginRequest,
+      protofiles.SellerProto.RegisterResponse> getLoginMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.LoginRequest, protofiles.SellerProto.RegisterResponse> getLoginMethod;
     if ((getLoginMethod = SellerServiceGrpc.getLoginMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getLoginMethod = SellerServiceGrpc.getLoginMethod) == null) {
           SellerServiceGrpc.getLoginMethod = getLoginMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.LoginRequest, protoFiles.SellerProto.RegisterResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.LoginRequest, protofiles.SellerProto.RegisterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.LoginRequest.getDefaultInstance()))
+                  protofiles.SellerProto.LoginRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.RegisterResponse.getDefaultInstance()))
+                  protofiles.SellerProto.RegisterResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("login"))
               .build();
         }
@@ -45,29 +45,29 @@ public final class SellerServiceGrpc {
     return getLoginMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.RegisterResponse> getRegisterMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.RegisterResponse> getRegisterMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "register",
-      requestType = protoFiles.SellerProto.PayloadRequest.class,
-      responseType = protoFiles.SellerProto.RegisterResponse.class,
+      requestType = protofiles.SellerProto.PayloadRequest.class,
+      responseType = protofiles.SellerProto.RegisterResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.RegisterResponse> getRegisterMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.RegisterResponse> getRegisterMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.RegisterResponse> getRegisterMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.RegisterResponse> getRegisterMethod;
     if ((getRegisterMethod = SellerServiceGrpc.getRegisterMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getRegisterMethod = SellerServiceGrpc.getRegisterMethod) == null) {
           SellerServiceGrpc.getRegisterMethod = getRegisterMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.RegisterResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.RegisterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "register"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.PayloadRequest.getDefaultInstance()))
+                  protofiles.SellerProto.PayloadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.RegisterResponse.getDefaultInstance()))
+                  protofiles.SellerProto.RegisterResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("register"))
               .build();
         }
@@ -76,29 +76,29 @@ public final class SellerServiceGrpc {
     return getRegisterMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.LogoutRequest,
-      protoFiles.SellerProto.APIResponse> getLogoutMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.LogoutRequest,
+      protofiles.SellerProto.APIResponse> getLogoutMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "logout",
-      requestType = protoFiles.SellerProto.LogoutRequest.class,
-      responseType = protoFiles.SellerProto.APIResponse.class,
+      requestType = protofiles.SellerProto.LogoutRequest.class,
+      responseType = protofiles.SellerProto.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.LogoutRequest,
-      protoFiles.SellerProto.APIResponse> getLogoutMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.LogoutRequest, protoFiles.SellerProto.APIResponse> getLogoutMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.LogoutRequest,
+      protofiles.SellerProto.APIResponse> getLogoutMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.LogoutRequest, protofiles.SellerProto.APIResponse> getLogoutMethod;
     if ((getLogoutMethod = SellerServiceGrpc.getLogoutMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getLogoutMethod = SellerServiceGrpc.getLogoutMethod) == null) {
           SellerServiceGrpc.getLogoutMethod = getLogoutMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.LogoutRequest, protoFiles.SellerProto.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.LogoutRequest, protofiles.SellerProto.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "logout"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.LogoutRequest.getDefaultInstance()))
+                  protofiles.SellerProto.LogoutRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.APIResponse.getDefaultInstance()))
+                  protofiles.SellerProto.APIResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("logout"))
               .build();
         }
@@ -107,29 +107,29 @@ public final class SellerServiceGrpc {
     return getLogoutMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.SellerRequest,
-      protoFiles.SellerProto.SellerRatingResponse> getGetSellerRatingMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.SellerRequest,
+      protofiles.SellerProto.SellerRatingResponse> getGetSellerRatingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getSellerRating",
-      requestType = protoFiles.SellerProto.SellerRequest.class,
-      responseType = protoFiles.SellerProto.SellerRatingResponse.class,
+      requestType = protofiles.SellerProto.SellerRequest.class,
+      responseType = protofiles.SellerProto.SellerRatingResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.SellerRequest,
-      protoFiles.SellerProto.SellerRatingResponse> getGetSellerRatingMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.SellerRequest, protoFiles.SellerProto.SellerRatingResponse> getGetSellerRatingMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.SellerRequest,
+      protofiles.SellerProto.SellerRatingResponse> getGetSellerRatingMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.SellerRequest, protofiles.SellerProto.SellerRatingResponse> getGetSellerRatingMethod;
     if ((getGetSellerRatingMethod = SellerServiceGrpc.getGetSellerRatingMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getGetSellerRatingMethod = SellerServiceGrpc.getGetSellerRatingMethod) == null) {
           SellerServiceGrpc.getGetSellerRatingMethod = getGetSellerRatingMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.SellerRequest, protoFiles.SellerProto.SellerRatingResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.SellerRequest, protofiles.SellerProto.SellerRatingResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSellerRating"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.SellerRequest.getDefaultInstance()))
+                  protofiles.SellerProto.SellerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.SellerRatingResponse.getDefaultInstance()))
+                  protofiles.SellerProto.SellerRatingResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("getSellerRating"))
               .build();
         }
@@ -138,29 +138,29 @@ public final class SellerServiceGrpc {
     return getGetSellerRatingMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getItemSaleMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.APIResponse> getItemSaleMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "itemSale",
-      requestType = protoFiles.SellerProto.PayloadRequest.class,
-      responseType = protoFiles.SellerProto.APIResponse.class,
+      requestType = protofiles.SellerProto.PayloadRequest.class,
+      responseType = protofiles.SellerProto.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getItemSaleMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse> getItemSaleMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.APIResponse> getItemSaleMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.APIResponse> getItemSaleMethod;
     if ((getItemSaleMethod = SellerServiceGrpc.getItemSaleMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getItemSaleMethod = SellerServiceGrpc.getItemSaleMethod) == null) {
           SellerServiceGrpc.getItemSaleMethod = getItemSaleMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "itemSale"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.PayloadRequest.getDefaultInstance()))
+                  protofiles.SellerProto.PayloadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.APIResponse.getDefaultInstance()))
+                  protofiles.SellerProto.APIResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("itemSale"))
               .build();
         }
@@ -169,29 +169,29 @@ public final class SellerServiceGrpc {
     return getItemSaleMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getChangePriceMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.APIResponse> getChangePriceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "changePrice",
-      requestType = protoFiles.SellerProto.PayloadRequest.class,
-      responseType = protoFiles.SellerProto.APIResponse.class,
+      requestType = protofiles.SellerProto.PayloadRequest.class,
+      responseType = protofiles.SellerProto.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getChangePriceMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse> getChangePriceMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.APIResponse> getChangePriceMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.APIResponse> getChangePriceMethod;
     if ((getChangePriceMethod = SellerServiceGrpc.getChangePriceMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getChangePriceMethod = SellerServiceGrpc.getChangePriceMethod) == null) {
           SellerServiceGrpc.getChangePriceMethod = getChangePriceMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "changePrice"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.PayloadRequest.getDefaultInstance()))
+                  protofiles.SellerProto.PayloadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.APIResponse.getDefaultInstance()))
+                  protofiles.SellerProto.APIResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("changePrice"))
               .build();
         }
@@ -200,29 +200,29 @@ public final class SellerServiceGrpc {
     return getChangePriceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getRemoveItemMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.APIResponse> getRemoveItemMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "removeItem",
-      requestType = protoFiles.SellerProto.PayloadRequest.class,
-      responseType = protoFiles.SellerProto.APIResponse.class,
+      requestType = protofiles.SellerProto.PayloadRequest.class,
+      responseType = protofiles.SellerProto.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getRemoveItemMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse> getRemoveItemMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest,
+      protofiles.SellerProto.APIResponse> getRemoveItemMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.APIResponse> getRemoveItemMethod;
     if ((getRemoveItemMethod = SellerServiceGrpc.getRemoveItemMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getRemoveItemMethod = SellerServiceGrpc.getRemoveItemMethod) == null) {
           SellerServiceGrpc.getRemoveItemMethod = getRemoveItemMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.PayloadRequest, protofiles.SellerProto.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "removeItem"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.PayloadRequest.getDefaultInstance()))
+                  protofiles.SellerProto.PayloadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.APIResponse.getDefaultInstance()))
+                  protofiles.SellerProto.APIResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("removeItem"))
               .build();
         }
@@ -231,29 +231,29 @@ public final class SellerServiceGrpc {
     return getRemoveItemMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.SellerRequest,
-      protoFiles.SellerProto.ListResponse> getDisplayItemsMethod;
+  private static volatile io.grpc.MethodDescriptor<protofiles.SellerProto.SellerRequest,
+      protofiles.SellerProto.ListResponse> getDisplayItemsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "displayItems",
-      requestType = protoFiles.SellerProto.SellerRequest.class,
-      responseType = protoFiles.SellerProto.ListResponse.class,
+      requestType = protofiles.SellerProto.SellerRequest.class,
+      responseType = protofiles.SellerProto.ListResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<protoFiles.SellerProto.SellerRequest,
-      protoFiles.SellerProto.ListResponse> getDisplayItemsMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.SellerRequest, protoFiles.SellerProto.ListResponse> getDisplayItemsMethod;
+  public static io.grpc.MethodDescriptor<protofiles.SellerProto.SellerRequest,
+      protofiles.SellerProto.ListResponse> getDisplayItemsMethod() {
+    io.grpc.MethodDescriptor<protofiles.SellerProto.SellerRequest, protofiles.SellerProto.ListResponse> getDisplayItemsMethod;
     if ((getDisplayItemsMethod = SellerServiceGrpc.getDisplayItemsMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getDisplayItemsMethod = SellerServiceGrpc.getDisplayItemsMethod) == null) {
           SellerServiceGrpc.getDisplayItemsMethod = getDisplayItemsMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.SellerRequest, protoFiles.SellerProto.ListResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protofiles.SellerProto.SellerRequest, protofiles.SellerProto.ListResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "displayItems"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.SellerRequest.getDefaultInstance()))
+                  protofiles.SellerProto.SellerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.ListResponse.getDefaultInstance()))
+                  protofiles.SellerProto.ListResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("displayItems"))
               .build();
         }
@@ -312,57 +312,57 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public void login(protoFiles.SellerProto.LoginRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
+    public void login(protofiles.SellerProto.LoginRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
     /**
      */
-    public void register(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
+    public void register(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterMethod(), responseObserver);
     }
 
     /**
      */
-    public void logout(protoFiles.SellerProto.LogoutRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void logout(protofiles.SellerProto.LogoutRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLogoutMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSellerRating(protoFiles.SellerProto.SellerRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.SellerRatingResponse> responseObserver) {
+    public void getSellerRating(protofiles.SellerProto.SellerRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.SellerRatingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSellerRatingMethod(), responseObserver);
     }
 
     /**
      */
-    public void itemSale(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void itemSale(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getItemSaleMethod(), responseObserver);
     }
 
     /**
      */
-    public void changePrice(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void changePrice(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangePriceMethod(), responseObserver);
     }
 
     /**
      */
-    public void removeItem(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void removeItem(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveItemMethod(), responseObserver);
     }
 
     /**
      */
-    public void displayItems(protoFiles.SellerProto.SellerRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.ListResponse> responseObserver) {
+    public void displayItems(protofiles.SellerProto.SellerRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.ListResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisplayItemsMethod(), responseObserver);
     }
 
@@ -372,57 +372,57 @@ public final class SellerServiceGrpc {
             getLoginMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.LoginRequest,
-                protoFiles.SellerProto.RegisterResponse>(
+                protofiles.SellerProto.LoginRequest,
+                protofiles.SellerProto.RegisterResponse>(
                   this, METHODID_LOGIN)))
           .addMethod(
             getRegisterMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.PayloadRequest,
-                protoFiles.SellerProto.RegisterResponse>(
+                protofiles.SellerProto.PayloadRequest,
+                protofiles.SellerProto.RegisterResponse>(
                   this, METHODID_REGISTER)))
           .addMethod(
             getLogoutMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.LogoutRequest,
-                protoFiles.SellerProto.APIResponse>(
+                protofiles.SellerProto.LogoutRequest,
+                protofiles.SellerProto.APIResponse>(
                   this, METHODID_LOGOUT)))
           .addMethod(
             getGetSellerRatingMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.SellerRequest,
-                protoFiles.SellerProto.SellerRatingResponse>(
+                protofiles.SellerProto.SellerRequest,
+                protofiles.SellerProto.SellerRatingResponse>(
                   this, METHODID_GET_SELLER_RATING)))
           .addMethod(
             getItemSaleMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.PayloadRequest,
-                protoFiles.SellerProto.APIResponse>(
+                protofiles.SellerProto.PayloadRequest,
+                protofiles.SellerProto.APIResponse>(
                   this, METHODID_ITEM_SALE)))
           .addMethod(
             getChangePriceMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.PayloadRequest,
-                protoFiles.SellerProto.APIResponse>(
+                protofiles.SellerProto.PayloadRequest,
+                protofiles.SellerProto.APIResponse>(
                   this, METHODID_CHANGE_PRICE)))
           .addMethod(
             getRemoveItemMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.PayloadRequest,
-                protoFiles.SellerProto.APIResponse>(
+                protofiles.SellerProto.PayloadRequest,
+                protofiles.SellerProto.APIResponse>(
                   this, METHODID_REMOVE_ITEM)))
           .addMethod(
             getDisplayItemsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                protoFiles.SellerProto.SellerRequest,
-                protoFiles.SellerProto.ListResponse>(
+                protofiles.SellerProto.SellerRequest,
+                protofiles.SellerProto.ListResponse>(
                   this, METHODID_DISPLAY_ITEMS)))
           .build();
     }
@@ -444,64 +444,64 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public void login(protoFiles.SellerProto.LoginRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
+    public void login(protofiles.SellerProto.LoginRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void register(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
+    public void register(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRegisterMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void logout(protoFiles.SellerProto.LogoutRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void logout(protofiles.SellerProto.LogoutRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLogoutMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getSellerRating(protoFiles.SellerProto.SellerRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.SellerRatingResponse> responseObserver) {
+    public void getSellerRating(protofiles.SellerProto.SellerRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.SellerRatingResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSellerRatingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void itemSale(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void itemSale(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getItemSaleMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void changePrice(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void changePrice(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getChangePriceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void removeItem(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+    public void removeItem(protofiles.SellerProto.PayloadRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void displayItems(protoFiles.SellerProto.SellerRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.ListResponse> responseObserver) {
+    public void displayItems(protofiles.SellerProto.SellerRequest request,
+        io.grpc.stub.StreamObserver<protofiles.SellerProto.ListResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisplayItemsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -523,56 +523,56 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public protoFiles.SellerProto.RegisterResponse login(protoFiles.SellerProto.LoginRequest request) {
+    public protofiles.SellerProto.RegisterResponse login(protofiles.SellerProto.LoginRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.RegisterResponse register(protoFiles.SellerProto.PayloadRequest request) {
+    public protofiles.SellerProto.RegisterResponse register(protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRegisterMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.APIResponse logout(protoFiles.SellerProto.LogoutRequest request) {
+    public protofiles.SellerProto.APIResponse logout(protofiles.SellerProto.LogoutRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLogoutMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.SellerRatingResponse getSellerRating(protoFiles.SellerProto.SellerRequest request) {
+    public protofiles.SellerProto.SellerRatingResponse getSellerRating(protofiles.SellerProto.SellerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSellerRatingMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.APIResponse itemSale(protoFiles.SellerProto.PayloadRequest request) {
+    public protofiles.SellerProto.APIResponse itemSale(protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getItemSaleMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.APIResponse changePrice(protoFiles.SellerProto.PayloadRequest request) {
+    public protofiles.SellerProto.APIResponse changePrice(protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getChangePriceMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.APIResponse removeItem(protoFiles.SellerProto.PayloadRequest request) {
+    public protofiles.SellerProto.APIResponse removeItem(protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveItemMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.ListResponse displayItems(protoFiles.SellerProto.SellerRequest request) {
+    public protofiles.SellerProto.ListResponse displayItems(protofiles.SellerProto.SellerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisplayItemsMethod(), getCallOptions(), request);
     }
@@ -594,64 +594,64 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.RegisterResponse> login(
-        protoFiles.SellerProto.LoginRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.RegisterResponse> login(
+        protofiles.SellerProto.LoginRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.RegisterResponse> register(
-        protoFiles.SellerProto.PayloadRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.RegisterResponse> register(
+        protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRegisterMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.APIResponse> logout(
-        protoFiles.SellerProto.LogoutRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.APIResponse> logout(
+        protofiles.SellerProto.LogoutRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLogoutMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.SellerRatingResponse> getSellerRating(
-        protoFiles.SellerProto.SellerRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.SellerRatingResponse> getSellerRating(
+        protofiles.SellerProto.SellerRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSellerRatingMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.APIResponse> itemSale(
-        protoFiles.SellerProto.PayloadRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.APIResponse> itemSale(
+        protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getItemSaleMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.APIResponse> changePrice(
-        protoFiles.SellerProto.PayloadRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.APIResponse> changePrice(
+        protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getChangePriceMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.APIResponse> removeItem(
-        protoFiles.SellerProto.PayloadRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.APIResponse> removeItem(
+        protofiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveItemMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.ListResponse> displayItems(
-        protoFiles.SellerProto.SellerRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<protofiles.SellerProto.ListResponse> displayItems(
+        protofiles.SellerProto.SellerRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisplayItemsMethod(), getCallOptions()), request);
     }
@@ -684,36 +684,36 @@ public final class SellerServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LOGIN:
-          serviceImpl.login((protoFiles.SellerProto.LoginRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse>) responseObserver);
+          serviceImpl.login((protofiles.SellerProto.LoginRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.RegisterResponse>) responseObserver);
           break;
         case METHODID_REGISTER:
-          serviceImpl.register((protoFiles.SellerProto.PayloadRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse>) responseObserver);
+          serviceImpl.register((protofiles.SellerProto.PayloadRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.RegisterResponse>) responseObserver);
           break;
         case METHODID_LOGOUT:
-          serviceImpl.logout((protoFiles.SellerProto.LogoutRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse>) responseObserver);
+          serviceImpl.logout((protofiles.SellerProto.LogoutRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse>) responseObserver);
           break;
         case METHODID_GET_SELLER_RATING:
-          serviceImpl.getSellerRating((protoFiles.SellerProto.SellerRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.SellerRatingResponse>) responseObserver);
+          serviceImpl.getSellerRating((protofiles.SellerProto.SellerRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.SellerRatingResponse>) responseObserver);
           break;
         case METHODID_ITEM_SALE:
-          serviceImpl.itemSale((protoFiles.SellerProto.PayloadRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse>) responseObserver);
+          serviceImpl.itemSale((protofiles.SellerProto.PayloadRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse>) responseObserver);
           break;
         case METHODID_CHANGE_PRICE:
-          serviceImpl.changePrice((protoFiles.SellerProto.PayloadRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse>) responseObserver);
+          serviceImpl.changePrice((protofiles.SellerProto.PayloadRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse>) responseObserver);
           break;
         case METHODID_REMOVE_ITEM:
-          serviceImpl.removeItem((protoFiles.SellerProto.PayloadRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse>) responseObserver);
+          serviceImpl.removeItem((protofiles.SellerProto.PayloadRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.APIResponse>) responseObserver);
           break;
         case METHODID_DISPLAY_ITEMS:
-          serviceImpl.displayItems((protoFiles.SellerProto.SellerRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.ListResponse>) responseObserver);
+          serviceImpl.displayItems((protofiles.SellerProto.SellerRequest) request,
+              (io.grpc.stub.StreamObserver<protofiles.SellerProto.ListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -737,7 +737,7 @@ public final class SellerServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return protoFiles.SellerProto.getDescriptor();
+      return protofiles.SellerProto.getDescriptor();
     }
 
     @java.lang.Override

@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_outer_classname = "SellerProto";
-option java_package = "protoFiles";
+option java_package = "protofiles";
 
 service SellerService{
   rpc login(LoginRequest) returns (RegisterResponse);
@@ -37,6 +37,7 @@ message PayloadRequest{
 
 message LogoutRequest{
   string username = 1;
+  int32 sellerId = 2;
 }
 
 message SellerRequest{
