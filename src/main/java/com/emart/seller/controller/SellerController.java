@@ -50,10 +50,11 @@ public class SellerController {
 
 		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder().setPayload(input.toString()).build();
 		SellerProto.RegisterResponse response = (SellerProto.RegisterResponse) this.sellerGrpcHelperService.doGrpcCall(0, payloadRequest);
-		entity.put("message", response.getMessage());
-		entity.put("status", response.getStatus());
-		entity.put("sellerId", response.getSellerId());
-		entity.put("name", response.getName());
+
+		entity.put(Constants.response_status_key, response.getStatus());
+		entity.put(Constants.response_message_key, response.getMessage());
+		entity.put(Constants.request_name_key, response.getName());
+		entity.put(Constants.response_sellerId_key, response.getSellerId());
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
@@ -67,7 +68,7 @@ public class SellerController {
 
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
-		entity.put(Constants.request_username_key, response.getName());
+		entity.put(Constants.request_name_key, response.getName());
 		entity.put(Constants.response_sellerId_key, response.getSellerId());
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
