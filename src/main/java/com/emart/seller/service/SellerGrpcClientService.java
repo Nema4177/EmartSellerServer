@@ -12,7 +12,7 @@ public class SellerGrpcClientService {
     private final SellerServiceGrpc.SellerServiceBlockingStub sellerStub;
 
     public SellerGrpcClientService() {
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8081)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8083)
                 .usePlaintext()
                 .build();
 

@@ -15,28 +15,28 @@ public final class SellerServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest,
-      protoFiles.SellerProto.APIResponse> getLoginMethod;
+      protoFiles.SellerProto.RegisterResponse> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "login",
       requestType = protoFiles.SellerProto.LoginRequest.class,
-      responseType = protoFiles.SellerProto.APIResponse.class,
+      responseType = protoFiles.SellerProto.RegisterResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest,
-      protoFiles.SellerProto.APIResponse> getLoginMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest, protoFiles.SellerProto.APIResponse> getLoginMethod;
+      protoFiles.SellerProto.RegisterResponse> getLoginMethod() {
+    io.grpc.MethodDescriptor<protoFiles.SellerProto.LoginRequest, protoFiles.SellerProto.RegisterResponse> getLoginMethod;
     if ((getLoginMethod = SellerServiceGrpc.getLoginMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getLoginMethod = SellerServiceGrpc.getLoginMethod) == null) {
           SellerServiceGrpc.getLoginMethod = getLoginMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.LoginRequest, protoFiles.SellerProto.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protoFiles.SellerProto.LoginRequest, protoFiles.SellerProto.RegisterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   protoFiles.SellerProto.LoginRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.APIResponse.getDefaultInstance()))
+                  protoFiles.SellerProto.RegisterResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("login"))
               .build();
         }
@@ -46,28 +46,28 @@ public final class SellerServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getRegisterMethod;
+      protoFiles.SellerProto.RegisterResponse> getRegisterMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "register",
       requestType = protoFiles.SellerProto.PayloadRequest.class,
-      responseType = protoFiles.SellerProto.APIResponse.class,
+      responseType = protoFiles.SellerProto.RegisterResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest,
-      protoFiles.SellerProto.APIResponse> getRegisterMethod() {
-    io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse> getRegisterMethod;
+      protoFiles.SellerProto.RegisterResponse> getRegisterMethod() {
+    io.grpc.MethodDescriptor<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.RegisterResponse> getRegisterMethod;
     if ((getRegisterMethod = SellerServiceGrpc.getRegisterMethod) == null) {
       synchronized (SellerServiceGrpc.class) {
         if ((getRegisterMethod = SellerServiceGrpc.getRegisterMethod) == null) {
           SellerServiceGrpc.getRegisterMethod = getRegisterMethod =
-              io.grpc.MethodDescriptor.<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<protoFiles.SellerProto.PayloadRequest, protoFiles.SellerProto.RegisterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "register"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   protoFiles.SellerProto.PayloadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  protoFiles.SellerProto.APIResponse.getDefaultInstance()))
+                  protoFiles.SellerProto.RegisterResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SellerServiceMethodDescriptorSupplier("register"))
               .build();
         }
@@ -313,14 +313,14 @@ public final class SellerServiceGrpc {
     /**
      */
     public void login(protoFiles.SellerProto.LoginRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
     /**
      */
     public void register(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterMethod(), responseObserver);
     }
 
@@ -373,14 +373,14 @@ public final class SellerServiceGrpc {
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 protoFiles.SellerProto.LoginRequest,
-                protoFiles.SellerProto.APIResponse>(
+                protoFiles.SellerProto.RegisterResponse>(
                   this, METHODID_LOGIN)))
           .addMethod(
             getRegisterMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 protoFiles.SellerProto.PayloadRequest,
-                protoFiles.SellerProto.APIResponse>(
+                protoFiles.SellerProto.RegisterResponse>(
                   this, METHODID_REGISTER)))
           .addMethod(
             getLogoutMethod(),
@@ -445,7 +445,7 @@ public final class SellerServiceGrpc {
     /**
      */
     public void login(protoFiles.SellerProto.LoginRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
@@ -453,7 +453,7 @@ public final class SellerServiceGrpc {
     /**
      */
     public void register(protoFiles.SellerProto.PayloadRequest request,
-        io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRegisterMethod(), getCallOptions()), request, responseObserver);
     }
@@ -523,14 +523,14 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public protoFiles.SellerProto.APIResponse login(protoFiles.SellerProto.LoginRequest request) {
+    public protoFiles.SellerProto.RegisterResponse login(protoFiles.SellerProto.LoginRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public protoFiles.SellerProto.APIResponse register(protoFiles.SellerProto.PayloadRequest request) {
+    public protoFiles.SellerProto.RegisterResponse register(protoFiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRegisterMethod(), getCallOptions(), request);
     }
@@ -594,7 +594,7 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.APIResponse> login(
+    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.RegisterResponse> login(
         protoFiles.SellerProto.LoginRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
@@ -602,7 +602,7 @@ public final class SellerServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.APIResponse> register(
+    public com.google.common.util.concurrent.ListenableFuture<protoFiles.SellerProto.RegisterResponse> register(
         protoFiles.SellerProto.PayloadRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRegisterMethod(), getCallOptions()), request);
@@ -685,11 +685,11 @@ public final class SellerServiceGrpc {
       switch (methodId) {
         case METHODID_LOGIN:
           serviceImpl.login((protoFiles.SellerProto.LoginRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse>) responseObserver);
           break;
         case METHODID_REGISTER:
           serviceImpl.register((protoFiles.SellerProto.PayloadRequest) request,
-              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.APIResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<protoFiles.SellerProto.RegisterResponse>) responseObserver);
           break;
         case METHODID_LOGOUT:
           serviceImpl.logout((protoFiles.SellerProto.LogoutRequest) request,

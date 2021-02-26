@@ -4,8 +4,8 @@ option java_outer_classname = "SellerProto";
 option java_package = "protoFiles";
 
 service SellerService{
-  rpc login(LoginRequest) returns (APIResponse);
-  rpc register(PayloadRequest) returns (APIResponse);
+  rpc login(LoginRequest) returns (RegisterResponse);
+  rpc register(PayloadRequest) returns (RegisterResponse);
   rpc logout(LogoutRequest) returns (APIResponse);
   rpc getSellerRating(SellerRequest) returns (SellerRatingResponse);
   rpc itemSale(PayloadRequest) returns (APIResponse);
@@ -23,9 +23,16 @@ message APIResponse{
   string message = 2;
 }
 
+message RegisterResponse{
+  int32 status = 1;
+  string message = 2;
+  string name = 3;
+  int32 sellerId = 4;
+}
+
 message PayloadRequest{
   string payload = 1;
-  int64 sellerId = 2;
+  int32 sellerId = 2;
 }
 
 message LogoutRequest{
@@ -33,14 +40,18 @@ message LogoutRequest{
 }
 
 message SellerRequest{
-  int64 sellerId = 1;
+  int32 sellerId = 1;
 }
 
 message SellerRatingResponse{
-  int32 thumbsUp = 1;
-  int32 thumbsDown = 2;
+  int32 status = 1;
+  string message = 2;
+  int32 thumbsUp = 3;
+  int32 thumbsDown = 4;
 }
 
 message ListResponse{
-  string responsePayload = 1;
+  int32 status = 1;
+  string message = 2;
+  string responsePayload = 3;
 }

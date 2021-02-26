@@ -1,6 +1,7 @@
 package com.emart.seller.controller;
 
 import com.emart.seller.service.SellerGrpcClientService;
+import com.emart.seller.utils.Constants;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,17 +15,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import protoFiles.SellerProto;
 
-import com.emart.seller.data.ItemRepository;
-import com.emart.seller.service.SellerService;
 
 @RestController
 public class SellerController {
 
-	@Autowired
-	SellerService service;
+//	@Autowired
+//	SellerService service;
 
-	@Autowired
-	ItemRepository itemRepository;
+//	@Autowired
+//	ItemRepository itemRepository;
 
 	@Autowired
 	SellerGrpcClientService sellerGrpcHelperService;
@@ -47,7 +46,7 @@ public class SellerController {
 	}
 
 	@PostMapping(path = "/createAccount", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<JSONObject> createAccount(@RequestBody JSONObject input, @RequestParam int sellerId) {
+	public ResponseEntity<JSONObject> createAccount(@RequestBody JSONObject input) {
 		JSONObject entity = new JSONObject();
 
 		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder().setPayload(input.toString()).build();
@@ -60,9 +59,16 @@ public class SellerController {
 	public ResponseEntity<JSONObject> login(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
-		SellerProto.LoginRequest loginRequest = SellerProto.LoginRequest.newBuilder().setPayload(input.toString()).build();
-		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(1, loginRequest);
+		System.out.println("REST" + input.toString() + " " + sellerId);
 
+		SellerProto.LoginRequest loginRequest = SellerProto.LoginRequest.newBuilder().setPayload(input.toString()).build();
+		SellerProto.RegisterResponse response = (SellerProto.RegisterResponse) this.sellerGrpcHelperService.doGrpcCall(1, loginRequest);
+		System.out.println(response.getMessage() + response.getStatus() + "res from grpc");
+
+		entity.put(Constants.response_status_key, response.getStatus());
+		entity.put(Constants.response_message_key, response.getMessage());
+		entity.put(Constants.request_username_key, response.getName());
+		entity.put(Constants.response_sellerId_key, response.getSellerId());
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
@@ -77,7 +83,7 @@ public class SellerController {
 	}
 
 	@GetMapping("/getSellerRating")
-	public ResponseEntity<JSONObject> getSellerRating(@RequestParam long sellerId) {
+	public ResponseEntity<JSONObject> getSellerRating(@RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
 		SellerProto.SellerRequest sellerRequest = SellerProto.SellerRequest.newBuilder().setSellerId(sellerId).build();

@@ -1220,6 +1220,864 @@ public final class SellerProto {
 
   }
 
+  public interface RegisterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RegisterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 status = 1;</code>
+     * @return The status.
+     */
+    int getStatus();
+
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>int32 sellerId = 4;</code>
+     * @return The sellerId.
+     */
+    int getSellerId();
+  }
+  /**
+   * Protobuf type {@code RegisterResponse}
+   */
+  public static final class RegisterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:RegisterResponse)
+      RegisterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterResponse.newBuilder() to construct.
+    private RegisterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterResponse() {
+      message_ = "";
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegisterResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 32: {
+
+              sellerId_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protoFiles.SellerProto.internal_static_RegisterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protoFiles.SellerProto.internal_static_RegisterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protoFiles.SellerProto.RegisterResponse.class, protoFiles.SellerProto.RegisterResponse.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>int32 status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLERID_FIELD_NUMBER = 4;
+    private int sellerId_;
+    /**
+     * <code>int32 sellerId = 4;</code>
+     * @return The sellerId.
+     */
+    @java.lang.Override
+    public int getSellerId() {
+      return sellerId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != 0) {
+        output.writeInt32(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (sellerId_ != 0) {
+        output.writeInt32(4, sellerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (sellerId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, sellerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof protoFiles.SellerProto.RegisterResponse)) {
+        return super.equals(obj);
+      }
+      protoFiles.SellerProto.RegisterResponse other = (protoFiles.SellerProto.RegisterResponse) obj;
+
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getSellerId()
+          != other.getSellerId()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SELLERID_FIELD_NUMBER;
+      hash = (53 * hash) + getSellerId();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static protoFiles.SellerProto.RegisterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(protoFiles.SellerProto.RegisterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code RegisterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:RegisterResponse)
+        protoFiles.SellerProto.RegisterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protoFiles.SellerProto.internal_static_RegisterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protoFiles.SellerProto.internal_static_RegisterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protoFiles.SellerProto.RegisterResponse.class, protoFiles.SellerProto.RegisterResponse.Builder.class);
+      }
+
+      // Construct using protoFiles.SellerProto.RegisterResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        message_ = "";
+
+        name_ = "";
+
+        sellerId_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protoFiles.SellerProto.internal_static_RegisterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public protoFiles.SellerProto.RegisterResponse getDefaultInstanceForType() {
+        return protoFiles.SellerProto.RegisterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public protoFiles.SellerProto.RegisterResponse build() {
+        protoFiles.SellerProto.RegisterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public protoFiles.SellerProto.RegisterResponse buildPartial() {
+        protoFiles.SellerProto.RegisterResponse result = new protoFiles.SellerProto.RegisterResponse(this);
+        result.status_ = status_;
+        result.message_ = message_;
+        result.name_ = name_;
+        result.sellerId_ = sellerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protoFiles.SellerProto.RegisterResponse) {
+          return mergeFrom((protoFiles.SellerProto.RegisterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protoFiles.SellerProto.RegisterResponse other) {
+        if (other == protoFiles.SellerProto.RegisterResponse.getDefaultInstance()) return this;
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getSellerId() != 0) {
+          setSellerId(other.getSellerId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        protoFiles.SellerProto.RegisterResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protoFiles.SellerProto.RegisterResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>int32 status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>int32 status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 3;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int sellerId_ ;
+      /**
+       * <code>int32 sellerId = 4;</code>
+       * @return The sellerId.
+       */
+      @java.lang.Override
+      public int getSellerId() {
+        return sellerId_;
+      }
+      /**
+       * <code>int32 sellerId = 4;</code>
+       * @param value The sellerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerId(int value) {
+        
+        sellerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 sellerId = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSellerId() {
+        
+        sellerId_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:RegisterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:RegisterResponse)
+    private static final protoFiles.SellerProto.RegisterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new protoFiles.SellerProto.RegisterResponse();
+    }
+
+    public static protoFiles.SellerProto.RegisterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterResponse>() {
+      @java.lang.Override
+      public RegisterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegisterResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public protoFiles.SellerProto.RegisterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PayloadRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:PayloadRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -1237,10 +2095,10 @@ public final class SellerProto {
         getPayloadBytes();
 
     /**
-     * <code>int64 sellerId = 2;</code>
+     * <code>int32 sellerId = 2;</code>
      * @return The sellerId.
      */
-    long getSellerId();
+    int getSellerId();
   }
   /**
    * Protobuf type {@code PayloadRequest}
@@ -1296,7 +2154,7 @@ public final class SellerProto {
             }
             case 16: {
 
-              sellerId_ = input.readInt64();
+              sellerId_ = input.readInt32();
               break;
             }
             default: {
@@ -1370,13 +2228,13 @@ public final class SellerProto {
     }
 
     public static final int SELLERID_FIELD_NUMBER = 2;
-    private long sellerId_;
+    private int sellerId_;
     /**
-     * <code>int64 sellerId = 2;</code>
+     * <code>int32 sellerId = 2;</code>
      * @return The sellerId.
      */
     @java.lang.Override
-    public long getSellerId() {
+    public int getSellerId() {
       return sellerId_;
     }
 
@@ -1397,8 +2255,8 @@ public final class SellerProto {
       if (!getPayloadBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, payload_);
       }
-      if (sellerId_ != 0L) {
-        output.writeInt64(2, sellerId_);
+      if (sellerId_ != 0) {
+        output.writeInt32(2, sellerId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1412,9 +2270,9 @@ public final class SellerProto {
       if (!getPayloadBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, payload_);
       }
-      if (sellerId_ != 0L) {
+      if (sellerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, sellerId_);
+          .computeInt32Size(2, sellerId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1449,8 +2307,7 @@ public final class SellerProto {
       hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
       hash = (53 * hash) + getPayload().hashCode();
       hash = (37 * hash) + SELLERID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSellerId());
+      hash = (53 * hash) + getSellerId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1586,7 +2443,7 @@ public final class SellerProto {
         super.clear();
         payload_ = "";
 
-        sellerId_ = 0L;
+        sellerId_ = 0;
 
         return this;
       }
@@ -1668,7 +2525,7 @@ public final class SellerProto {
           payload_ = other.payload_;
           onChanged();
         }
-        if (other.getSellerId() != 0L) {
+        if (other.getSellerId() != 0) {
           setSellerId(other.getSellerId());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1776,33 +2633,33 @@ public final class SellerProto {
         return this;
       }
 
-      private long sellerId_ ;
+      private int sellerId_ ;
       /**
-       * <code>int64 sellerId = 2;</code>
+       * <code>int32 sellerId = 2;</code>
        * @return The sellerId.
        */
       @java.lang.Override
-      public long getSellerId() {
+      public int getSellerId() {
         return sellerId_;
       }
       /**
-       * <code>int64 sellerId = 2;</code>
+       * <code>int32 sellerId = 2;</code>
        * @param value The sellerId to set.
        * @return This builder for chaining.
        */
-      public Builder setSellerId(long value) {
+      public Builder setSellerId(int value) {
         
         sellerId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 sellerId = 2;</code>
+       * <code>int32 sellerId = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearSellerId() {
         
-        sellerId_ = 0L;
+        sellerId_ = 0;
         onChanged();
         return this;
       }
@@ -2432,10 +3289,10 @@ public final class SellerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 sellerId = 1;</code>
+     * <code>int32 sellerId = 1;</code>
      * @return The sellerId.
      */
-    long getSellerId();
+    int getSellerId();
   }
   /**
    * Protobuf type {@code SellerRequest}
@@ -2484,7 +3341,7 @@ public final class SellerProto {
               break;
             case 8: {
 
-              sellerId_ = input.readInt64();
+              sellerId_ = input.readInt32();
               break;
             }
             default: {
@@ -2520,13 +3377,13 @@ public final class SellerProto {
     }
 
     public static final int SELLERID_FIELD_NUMBER = 1;
-    private long sellerId_;
+    private int sellerId_;
     /**
-     * <code>int64 sellerId = 1;</code>
+     * <code>int32 sellerId = 1;</code>
      * @return The sellerId.
      */
     @java.lang.Override
-    public long getSellerId() {
+    public int getSellerId() {
       return sellerId_;
     }
 
@@ -2544,8 +3401,8 @@ public final class SellerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (sellerId_ != 0L) {
-        output.writeInt64(1, sellerId_);
+      if (sellerId_ != 0) {
+        output.writeInt32(1, sellerId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2556,9 +3413,9 @@ public final class SellerProto {
       if (size != -1) return size;
 
       size = 0;
-      if (sellerId_ != 0L) {
+      if (sellerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, sellerId_);
+          .computeInt32Size(1, sellerId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2589,8 +3446,7 @@ public final class SellerProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SELLERID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSellerId());
+      hash = (53 * hash) + getSellerId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2724,7 +3580,7 @@ public final class SellerProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        sellerId_ = 0L;
+        sellerId_ = 0;
 
         return this;
       }
@@ -2801,7 +3657,7 @@ public final class SellerProto {
 
       public Builder mergeFrom(protoFiles.SellerProto.SellerRequest other) {
         if (other == protoFiles.SellerProto.SellerRequest.getDefaultInstance()) return this;
-        if (other.getSellerId() != 0L) {
+        if (other.getSellerId() != 0) {
           setSellerId(other.getSellerId());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2833,33 +3689,33 @@ public final class SellerProto {
         return this;
       }
 
-      private long sellerId_ ;
+      private int sellerId_ ;
       /**
-       * <code>int64 sellerId = 1;</code>
+       * <code>int32 sellerId = 1;</code>
        * @return The sellerId.
        */
       @java.lang.Override
-      public long getSellerId() {
+      public int getSellerId() {
         return sellerId_;
       }
       /**
-       * <code>int64 sellerId = 1;</code>
+       * <code>int32 sellerId = 1;</code>
        * @param value The sellerId to set.
        * @return This builder for chaining.
        */
-      public Builder setSellerId(long value) {
+      public Builder setSellerId(int value) {
         
         sellerId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 sellerId = 1;</code>
+       * <code>int32 sellerId = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearSellerId() {
         
-        sellerId_ = 0L;
+        sellerId_ = 0;
         onChanged();
         return this;
       }
@@ -2921,13 +3777,31 @@ public final class SellerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 thumbsUp = 1;</code>
+     * <code>int32 status = 1;</code>
+     * @return The status.
+     */
+    int getStatus();
+
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>int32 thumbsUp = 3;</code>
      * @return The thumbsUp.
      */
     int getThumbsUp();
 
     /**
-     * <code>int32 thumbsDown = 2;</code>
+     * <code>int32 thumbsDown = 4;</code>
      * @return The thumbsDown.
      */
     int getThumbsDown();
@@ -2945,6 +3819,7 @@ public final class SellerProto {
       super(builder);
     }
     private SellerRatingResponse() {
+      message_ = "";
     }
 
     @java.lang.Override
@@ -2979,10 +3854,21 @@ public final class SellerProto {
               break;
             case 8: {
 
+              status_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            case 24: {
+
               thumbsUp_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 32: {
 
               thumbsDown_ = input.readInt32();
               break;
@@ -3019,10 +3905,59 @@ public final class SellerProto {
               protoFiles.SellerProto.SellerRatingResponse.class, protoFiles.SellerProto.SellerRatingResponse.Builder.class);
     }
 
-    public static final int THUMBSUP_FIELD_NUMBER = 1;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>int32 status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int THUMBSUP_FIELD_NUMBER = 3;
     private int thumbsUp_;
     /**
-     * <code>int32 thumbsUp = 1;</code>
+     * <code>int32 thumbsUp = 3;</code>
      * @return The thumbsUp.
      */
     @java.lang.Override
@@ -3030,10 +3965,10 @@ public final class SellerProto {
       return thumbsUp_;
     }
 
-    public static final int THUMBSDOWN_FIELD_NUMBER = 2;
+    public static final int THUMBSDOWN_FIELD_NUMBER = 4;
     private int thumbsDown_;
     /**
-     * <code>int32 thumbsDown = 2;</code>
+     * <code>int32 thumbsDown = 4;</code>
      * @return The thumbsDown.
      */
     @java.lang.Override
@@ -3055,11 +3990,17 @@ public final class SellerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (status_ != 0) {
+        output.writeInt32(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
       if (thumbsUp_ != 0) {
-        output.writeInt32(1, thumbsUp_);
+        output.writeInt32(3, thumbsUp_);
       }
       if (thumbsDown_ != 0) {
-        output.writeInt32(2, thumbsDown_);
+        output.writeInt32(4, thumbsDown_);
       }
       unknownFields.writeTo(output);
     }
@@ -3070,13 +4011,20 @@ public final class SellerProto {
       if (size != -1) return size;
 
       size = 0;
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
       if (thumbsUp_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, thumbsUp_);
+          .computeInt32Size(3, thumbsUp_);
       }
       if (thumbsDown_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, thumbsDown_);
+          .computeInt32Size(4, thumbsDown_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3093,6 +4041,10 @@ public final class SellerProto {
       }
       protoFiles.SellerProto.SellerRatingResponse other = (protoFiles.SellerProto.SellerRatingResponse) obj;
 
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
       if (getThumbsUp()
           != other.getThumbsUp()) return false;
       if (getThumbsDown()
@@ -3108,6 +4060,10 @@ public final class SellerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (37 * hash) + THUMBSUP_FIELD_NUMBER;
       hash = (53 * hash) + getThumbsUp();
       hash = (37 * hash) + THUMBSDOWN_FIELD_NUMBER;
@@ -3245,6 +4201,10 @@ public final class SellerProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        status_ = 0;
+
+        message_ = "";
+
         thumbsUp_ = 0;
 
         thumbsDown_ = 0;
@@ -3275,6 +4235,8 @@ public final class SellerProto {
       @java.lang.Override
       public protoFiles.SellerProto.SellerRatingResponse buildPartial() {
         protoFiles.SellerProto.SellerRatingResponse result = new protoFiles.SellerProto.SellerRatingResponse(this);
+        result.status_ = status_;
+        result.message_ = message_;
         result.thumbsUp_ = thumbsUp_;
         result.thumbsDown_ = thumbsDown_;
         onBuilt();
@@ -3325,6 +4287,13 @@ public final class SellerProto {
 
       public Builder mergeFrom(protoFiles.SellerProto.SellerRatingResponse other) {
         if (other == protoFiles.SellerProto.SellerRatingResponse.getDefaultInstance()) return this;
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
         if (other.getThumbsUp() != 0) {
           setThumbsUp(other.getThumbsUp());
         }
@@ -3360,9 +4329,116 @@ public final class SellerProto {
         return this;
       }
 
+      private int status_ ;
+      /**
+       * <code>int32 status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>int32 status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+
       private int thumbsUp_ ;
       /**
-       * <code>int32 thumbsUp = 1;</code>
+       * <code>int32 thumbsUp = 3;</code>
        * @return The thumbsUp.
        */
       @java.lang.Override
@@ -3370,7 +4446,7 @@ public final class SellerProto {
         return thumbsUp_;
       }
       /**
-       * <code>int32 thumbsUp = 1;</code>
+       * <code>int32 thumbsUp = 3;</code>
        * @param value The thumbsUp to set.
        * @return This builder for chaining.
        */
@@ -3381,7 +4457,7 @@ public final class SellerProto {
         return this;
       }
       /**
-       * <code>int32 thumbsUp = 1;</code>
+       * <code>int32 thumbsUp = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbsUp() {
@@ -3393,7 +4469,7 @@ public final class SellerProto {
 
       private int thumbsDown_ ;
       /**
-       * <code>int32 thumbsDown = 2;</code>
+       * <code>int32 thumbsDown = 4;</code>
        * @return The thumbsDown.
        */
       @java.lang.Override
@@ -3401,7 +4477,7 @@ public final class SellerProto {
         return thumbsDown_;
       }
       /**
-       * <code>int32 thumbsDown = 2;</code>
+       * <code>int32 thumbsDown = 4;</code>
        * @param value The thumbsDown to set.
        * @return This builder for chaining.
        */
@@ -3412,7 +4488,7 @@ public final class SellerProto {
         return this;
       }
       /**
-       * <code>int32 thumbsDown = 2;</code>
+       * <code>int32 thumbsDown = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearThumbsDown() {
@@ -3479,12 +4555,30 @@ public final class SellerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string responsePayload = 1;</code>
+     * <code>int32 status = 1;</code>
+     * @return The status.
+     */
+    int getStatus();
+
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>string responsePayload = 3;</code>
      * @return The responsePayload.
      */
     java.lang.String getResponsePayload();
     /**
-     * <code>string responsePayload = 1;</code>
+     * <code>string responsePayload = 3;</code>
      * @return The bytes for responsePayload.
      */
     com.google.protobuf.ByteString
@@ -3503,6 +4597,7 @@ public final class SellerProto {
       super(builder);
     }
     private ListResponse() {
+      message_ = "";
       responsePayload_ = "";
     }
 
@@ -3536,7 +4631,18 @@ public final class SellerProto {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 8: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               responsePayload_ = s;
@@ -3574,10 +4680,59 @@ public final class SellerProto {
               protoFiles.SellerProto.ListResponse.class, protoFiles.SellerProto.ListResponse.Builder.class);
     }
 
-    public static final int RESPONSEPAYLOAD_FIELD_NUMBER = 1;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>int32 status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESPONSEPAYLOAD_FIELD_NUMBER = 3;
     private volatile java.lang.Object responsePayload_;
     /**
-     * <code>string responsePayload = 1;</code>
+     * <code>string responsePayload = 3;</code>
      * @return The responsePayload.
      */
     @java.lang.Override
@@ -3594,7 +4749,7 @@ public final class SellerProto {
       }
     }
     /**
-     * <code>string responsePayload = 1;</code>
+     * <code>string responsePayload = 3;</code>
      * @return The bytes for responsePayload.
      */
     @java.lang.Override
@@ -3626,8 +4781,14 @@ public final class SellerProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (status_ != 0) {
+        output.writeInt32(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
       if (!getResponsePayloadBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, responsePayload_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, responsePayload_);
       }
       unknownFields.writeTo(output);
     }
@@ -3638,8 +4799,15 @@ public final class SellerProto {
       if (size != -1) return size;
 
       size = 0;
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
       if (!getResponsePayloadBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, responsePayload_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, responsePayload_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3656,6 +4824,10 @@ public final class SellerProto {
       }
       protoFiles.SellerProto.ListResponse other = (protoFiles.SellerProto.ListResponse) obj;
 
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
       if (!getResponsePayload()
           .equals(other.getResponsePayload())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -3669,6 +4841,10 @@ public final class SellerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (37 * hash) + RESPONSEPAYLOAD_FIELD_NUMBER;
       hash = (53 * hash) + getResponsePayload().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -3804,6 +4980,10 @@ public final class SellerProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        status_ = 0;
+
+        message_ = "";
+
         responsePayload_ = "";
 
         return this;
@@ -3832,6 +5012,8 @@ public final class SellerProto {
       @java.lang.Override
       public protoFiles.SellerProto.ListResponse buildPartial() {
         protoFiles.SellerProto.ListResponse result = new protoFiles.SellerProto.ListResponse(this);
+        result.status_ = status_;
+        result.message_ = message_;
         result.responsePayload_ = responsePayload_;
         onBuilt();
         return result;
@@ -3881,6 +5063,13 @@ public final class SellerProto {
 
       public Builder mergeFrom(protoFiles.SellerProto.ListResponse other) {
         if (other == protoFiles.SellerProto.ListResponse.getDefaultInstance()) return this;
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
         if (!other.getResponsePayload().isEmpty()) {
           responsePayload_ = other.responsePayload_;
           onChanged();
@@ -3914,9 +5103,116 @@ public final class SellerProto {
         return this;
       }
 
+      private int status_ ;
+      /**
+       * <code>int32 status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>int32 status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object responsePayload_ = "";
       /**
-       * <code>string responsePayload = 1;</code>
+       * <code>string responsePayload = 3;</code>
        * @return The responsePayload.
        */
       public java.lang.String getResponsePayload() {
@@ -3932,7 +5228,7 @@ public final class SellerProto {
         }
       }
       /**
-       * <code>string responsePayload = 1;</code>
+       * <code>string responsePayload = 3;</code>
        * @return The bytes for responsePayload.
        */
       public com.google.protobuf.ByteString
@@ -3949,7 +5245,7 @@ public final class SellerProto {
         }
       }
       /**
-       * <code>string responsePayload = 1;</code>
+       * <code>string responsePayload = 3;</code>
        * @param value The responsePayload to set.
        * @return This builder for chaining.
        */
@@ -3964,7 +5260,7 @@ public final class SellerProto {
         return this;
       }
       /**
-       * <code>string responsePayload = 1;</code>
+       * <code>string responsePayload = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearResponsePayload() {
@@ -3974,7 +5270,7 @@ public final class SellerProto {
         return this;
       }
       /**
-       * <code>string responsePayload = 1;</code>
+       * <code>string responsePayload = 3;</code>
        * @param value The bytes for responsePayload to set.
        * @return This builder for chaining.
        */
@@ -4053,6 +5349,11 @@ public final class SellerProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_APIResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RegisterResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_RegisterResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PayloadRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4088,23 +5389,27 @@ public final class SellerProto {
     java.lang.String[] descriptorData = {
       "\n\014seller.proto\"\037\n\014LoginRequest\022\017\n\007payloa" +
       "d\030\001 \001(\t\".\n\013APIResponse\022\016\n\006status\030\001 \001(\005\022\017" +
-      "\n\007message\030\002 \001(\t\"3\n\016PayloadRequest\022\017\n\007pay" +
-      "load\030\001 \001(\t\022\020\n\010sellerId\030\002 \001(\003\"!\n\rLogoutRe" +
-      "quest\022\020\n\010username\030\001 \001(\t\"!\n\rSellerRequest" +
-      "\022\020\n\010sellerId\030\001 \001(\003\"<\n\024SellerRatingRespon" +
-      "se\022\020\n\010thumbsUp\030\001 \001(\005\022\022\n\nthumbsDown\030\002 \001(\005" +
-      "\"\'\n\014ListResponse\022\027\n\017responsePayload\030\001 \001(" +
-      "\t2\367\002\n\rSellerService\022$\n\005login\022\r.LoginRequ" +
-      "est\032\014.APIResponse\022)\n\010register\022\017.PayloadR" +
-      "equest\032\014.APIResponse\022&\n\006logout\022\016.LogoutR" +
-      "equest\032\014.APIResponse\0228\n\017getSellerRating\022" +
-      "\016.SellerRequest\032\025.SellerRatingResponse\022)" +
-      "\n\010itemSale\022\017.PayloadRequest\032\014.APIRespons" +
-      "e\022,\n\013changePrice\022\017.PayloadRequest\032\014.APIR" +
-      "esponse\022+\n\nremoveItem\022\017.PayloadRequest\032\014" +
-      ".APIResponse\022-\n\014displayItems\022\016.SellerReq" +
-      "uest\032\r.ListResponseB\031\n\nprotoFilesB\013Selle" +
-      "rProtob\006proto3"
+      "\n\007message\030\002 \001(\t\"S\n\020RegisterResponse\022\016\n\006s" +
+      "tatus\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022\014\n\004name\030\003 \001" +
+      "(\t\022\020\n\010sellerId\030\004 \001(\005\"3\n\016PayloadRequest\022\017" +
+      "\n\007payload\030\001 \001(\t\022\020\n\010sellerId\030\002 \001(\005\"!\n\rLog" +
+      "outRequest\022\020\n\010username\030\001 \001(\t\"!\n\rSellerRe" +
+      "quest\022\020\n\010sellerId\030\001 \001(\005\"]\n\024SellerRatingR" +
+      "esponse\022\016\n\006status\030\001 \001(\005\022\017\n\007message\030\002 \001(\t" +
+      "\022\020\n\010thumbsUp\030\003 \001(\005\022\022\n\nthumbsDown\030\004 \001(\005\"H" +
+      "\n\014ListResponse\022\016\n\006status\030\001 \001(\005\022\017\n\007messag" +
+      "e\030\002 \001(\t\022\027\n\017responsePayload\030\003 \001(\t2\201\003\n\rSel" +
+      "lerService\022)\n\005login\022\r.LoginRequest\032\021.Reg" +
+      "isterResponse\022.\n\010register\022\017.PayloadReque" +
+      "st\032\021.RegisterResponse\022&\n\006logout\022\016.Logout" +
+      "Request\032\014.APIResponse\0228\n\017getSellerRating" +
+      "\022\016.SellerRequest\032\025.SellerRatingResponse\022" +
+      ")\n\010itemSale\022\017.PayloadRequest\032\014.APIRespon" +
+      "se\022,\n\013changePrice\022\017.PayloadRequest\032\014.API" +
+      "Response\022+\n\nremoveItem\022\017.PayloadRequest\032" +
+      "\014.APIResponse\022-\n\014displayItems\022\016.SellerRe" +
+      "quest\032\r.ListResponseB\031\n\nprotoFilesB\013Sell" +
+      "erProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4122,36 +5427,42 @@ public final class SellerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_APIResponse_descriptor,
         new java.lang.String[] { "Status", "Message", });
-    internal_static_PayloadRequest_descriptor =
+    internal_static_RegisterResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_RegisterResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_RegisterResponse_descriptor,
+        new java.lang.String[] { "Status", "Message", "Name", "SellerId", });
+    internal_static_PayloadRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_PayloadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PayloadRequest_descriptor,
         new java.lang.String[] { "Payload", "SellerId", });
     internal_static_LogoutRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_LogoutRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LogoutRequest_descriptor,
         new java.lang.String[] { "Username", });
     internal_static_SellerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_SellerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SellerRequest_descriptor,
         new java.lang.String[] { "SellerId", });
     internal_static_SellerRatingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_SellerRatingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SellerRatingResponse_descriptor,
-        new java.lang.String[] { "ThumbsUp", "ThumbsDown", });
+        new java.lang.String[] { "Status", "Message", "ThumbsUp", "ThumbsDown", });
     internal_static_ListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_ListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ListResponse_descriptor,
-        new java.lang.String[] { "ResponsePayload", });
+        new java.lang.String[] { "Status", "Message", "ResponsePayload", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

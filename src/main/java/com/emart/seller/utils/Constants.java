@@ -27,6 +27,7 @@ public class Constants {
 	
 	public static final String request_username_key = "username";
 	public static final String request_password_key = "password";
+	public static final String response_message_key = "messgae";
 
 	
 	public static final String response_status_key = "status";
