@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -58,7 +60,7 @@ public class SellerController {
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@PostMapping("/login")
+	@PostMapping(path="/login",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> login(@RequestBody JSONObject input) {
 		JSONObject entity = new JSONObject();
 
@@ -73,19 +75,19 @@ public class SellerController {
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@PostMapping("/logout")
+	@PostMapping(path="/logout",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> logout(@RequestParam String username, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
 		SellerProto.LogoutRequest logoutRequest = SellerProto.LogoutRequest.newBuilder().setUsername(username).setSellerId(sellerId).build();
 		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(2, logoutRequest);
-
+		
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@GetMapping("/getSellerRating")
+	@GetMapping(path="/getSellerRating",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> getSellerRating(@RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
@@ -99,7 +101,7 @@ public class SellerController {
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@PostMapping("/addItem")
+	@PostMapping(path="/addItem",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> addItem(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
@@ -112,42 +114,44 @@ public class SellerController {
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@PostMapping("/changeSalePrice")
+	@PutMapping(path="/changeSalePrice",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> changeSalePrice(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
 		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder()
 				.setPayload(input.toString()).setSellerId(sellerId).build();
 		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(5, payloadRequest);
-
+		
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
+		
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@PostMapping("/removeItem")
+	@DeleteMapping(path="/removeItem",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> removeItem(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
 		SellerProto.PayloadRequest payloadRequest = SellerProto.PayloadRequest.newBuilder()
 				.setPayload(input.toString()).setSellerId(sellerId).build();
 		SellerProto.APIResponse response = (SellerProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(6, payloadRequest);
-
+		
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
+		
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@GetMapping("/getAllItems")
+	@GetMapping(path="/getAllItems",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> getItems(@RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
 		SellerProto.SellerRequest sellerRequest = SellerProto.SellerRequest.newBuilder().setSellerId(sellerId).build();
 		SellerProto.ListResponse response = (SellerProto.ListResponse) this.sellerGrpcHelperService.doGrpcCall(7, sellerRequest);
-
-		entity.put(Constants.response_status_key, response.getStatus());
-		entity.put(Constants.response_message_key, response.getMessage());
+		
+		
 		entity.put(Constants.response_itemsList_key, response.getResponsePayload());
+
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 }
