@@ -1,14 +1,11 @@
 package com.emart.seller.data;
 
-import java.util.ArrayList;
-
 public class Item {
-
     private int id;
     private String name;
     private int category;
-    private ArrayList<String> keyWords;
-    private ItemCondition condition;
+    private String keywords;
+    private String condition;
     private double price;
     private int sellerId;
     private int quantity;
@@ -16,11 +13,11 @@ public class Item {
     public Item() {
     }
 
-    public Item(String name, int category, ArrayList<String> keyWords, ItemCondition condition, double price,
+    public Item(String name, int category, String keywords, String condition, double price,
                 int sellerId, int quantity) {
         this.name = name;
         this.category = category;
-        this.keyWords = keyWords;
+        this.keywords = keywords;
         this.condition = condition;
         this.price = price;
         this.sellerId = sellerId;
@@ -51,19 +48,19 @@ public class Item {
         this.category = category;
     }
 
-    public ArrayList<String> getKeyWords() {
-        return keyWords;
+    public String getKeywords() {
+        return keywords;
     }
 
-    public void setKeyWords(ArrayList<String> keyWords) {
-        this.keyWords = keyWords;
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
     }
 
-    public ItemCondition getCondition() {
+    public String getCondition() {
         return condition;
     }
 
-    public void setCondition(ItemCondition condition) {
+    public void setCondition(String condition) {
         this.condition = condition;
     }
 
