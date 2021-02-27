@@ -149,7 +149,8 @@ public class SellerController {
 		SellerProto.SellerRequest sellerRequest = SellerProto.SellerRequest.newBuilder().setSellerId(sellerId).build();
 		SellerProto.ListResponse response = (SellerProto.ListResponse) this.sellerGrpcHelperService.doGrpcCall(7, sellerRequest);
 		
-		
+		entity.put(Constants.response_status_key, response.getStatus());
+		entity.put(Constants.response_message_key, response.getMessage());
 		entity.put(Constants.response_itemsList_key, response.getResponsePayload());
 
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
