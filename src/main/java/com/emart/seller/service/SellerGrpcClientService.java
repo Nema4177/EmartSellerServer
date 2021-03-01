@@ -12,10 +12,12 @@ public class SellerGrpcClientService {
     private final SellerServiceGrpc.SellerServiceBlockingStub sellerStub;
 
     public SellerGrpcClientService() {
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8083)
+       /* ManagedChannel channel = ManagedChannelBuilder.forAddress("https://emart-seller-grpc.uc.r.appspot.com/", 8083)
+                .usePlaintext()
+                .build();*/
+        ManagedChannel channel = ManagedChannelBuilder.forTarget("https://emart-seller-grpc.uc.r.appspot.com/")
                 .usePlaintext()
                 .build();
-
         sellerStub = SellerServiceGrpc.newBlockingStub(channel);
     }
 
