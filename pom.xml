@@ -120,6 +120,7 @@
 				<version>2.2.0</version>
 				<configuration>
 					<deploy.projectId>natural-osprey-305003</deploy.projectId>
+					<deploy.version>01</deploy.version>
 					<!-- <appId>sample-project-vijay</appId> -->
 					<!-- <deployables> <param>target/Services-0.0.1/WEB-INF/appengine-web.xml</param> 
 						</deployables> -->
