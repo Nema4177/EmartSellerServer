@@ -114,7 +114,7 @@ public class SellerController {
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@PutMapping(path="/changeSalePrice",produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(path="/changeSalePrice",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> changeSalePrice(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
@@ -128,7 +128,7 @@ public class SellerController {
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 
-	@DeleteMapping(path="/removeItem",produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(path="/removeItem",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<JSONObject> removeItem(@RequestBody JSONObject input, @RequestParam int sellerId) {
 		JSONObject entity = new JSONObject();
 
