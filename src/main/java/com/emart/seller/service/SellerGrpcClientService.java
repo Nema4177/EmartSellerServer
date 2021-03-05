@@ -2,6 +2,7 @@ package com.emart.seller.service;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.okhttp.OkHttpChannelBuilder;
 import org.springframework.stereotype.Service;
 import protofiles.SellerServiceGrpc;
 import protofiles.SellerProto;
@@ -12,12 +13,12 @@ public class SellerGrpcClientService {
     private final SellerServiceGrpc.SellerServiceBlockingStub sellerStub;
 
     public SellerGrpcClientService() {
-        ManagedChannel channel = ManagedChannelBuilder.forTarget("https://emart-seller-grpc.uc.r.appspot.com/")
+//        ManagedChannel channel = OkHttpChannelBuilder.forAddress("seller-grpc-dot-natural-osprey-305003.uc.r.appspot.com", 8080)
+////                .usePlaintext()
+//                .build();
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",8085)
                 .usePlaintext()
                 .build();
-//        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",8083)
-//                .usePlaintext()
-//                .build();
         sellerStub = SellerServiceGrpc.newBlockingStub(channel);
     }
 
