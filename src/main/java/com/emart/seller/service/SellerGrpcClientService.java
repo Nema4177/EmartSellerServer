@@ -2,6 +2,7 @@ package com.emart.seller.service;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.okhttp.OkHttpChannelBuilder;
 import org.springframework.stereotype.Service;
 import protoFiles.CustomerProto;
 import protoFiles.ProductProto;
