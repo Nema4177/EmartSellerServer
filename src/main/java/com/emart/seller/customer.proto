@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option java_outer_classname = "CustomerProto";
+option java_package = "protoFiles";
+
+service CustomerService{
+  rpc sellerLogin(LoginRequest) returns (RegisterResponse);
+  rpc sellerRegister(PayloadRequest) returns (RegisterResponse);
+  rpc sellerLogout(LogoutRequest) returns (APIResponse);
+  rpc buyerLogin(LoginRequest) returns (RegisterResponse);
+  rpc buyerRegister(PayloadRequest) returns (RegisterResponse);
+  rpc buyerLogout(LogoutRequest) returns (APIResponse);
+  rpc getSellerRating(SellerRequest) returns (SellerRatingResponse);
+  rpc purchase(PayloadRequest) returns (APIResponse);
+  rpc feedback(PayloadRequest) returns (APIResponse);
+}
+
+message LoginRequest{
+  string payload = 1;
+}
+
+message APIResponse{
+  int32 status = 1;
+  string message = 2;
+}
+
+message RegisterResponse{
+  int32 status = 1;
+  string message = 2;
+  string name = 3;
+  int32 id = 4;
+}
+
+message PayloadRequest{
+  string payload = 1;
+  int32 id = 2;
+}
+
+message LogoutRequest{
+  string username = 1;
+  int32 id = 2;
+}
+
+message SellerRequest{
+  int32 sellerId = 1;
+}
+
+message SellerRatingResponse{
+  int32 status = 1;
+  string message = 2;
+  int32 thumbsUp = 3;
+  int32 thumbsDown = 4;
+}
+
+message ListResponse{
+  int32 status = 1;
+  string message = 2;
+  string responsePayload = 3;
+}
