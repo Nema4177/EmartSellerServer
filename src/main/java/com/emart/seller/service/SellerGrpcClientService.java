@@ -3,43 +3,48 @@ package com.emart.seller.service;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import org.springframework.stereotype.Service;
-import protofiles.SellerServiceGrpc;
-import protofiles.SellerProto;
+import protoFiles.CustomerProto;
+import protoFiles.ProductProto;
+import protoFiles.CustomerServiceGrpc;
+import protoFiles.ProductServiceGrpc;
 
 @Service
 public class SellerGrpcClientService {
 
-    private final SellerServiceGrpc.SellerServiceBlockingStub sellerStub;
+    private final CustomerServiceGrpc.CustomerServiceBlockingStub customerStub;
+    private final ProductServiceGrpc.ProductServiceBlockingStub productStub;
 
     public SellerGrpcClientService() {
-       /* ManagedChannel channel = ManagedChannelBuilder.forAddress("https://emart-seller-grpc.uc.r.appspot.com/", 8083)
-                .usePlaintext()
-                .build();*/
-        ManagedChannel channel = ManagedChannelBuilder.forTarget("https://emart-seller-grpc.uc.r.appspot.com/")
+        ManagedChannel customerChannel = ManagedChannelBuilder.forAddress("localhost", 8085)
                 .usePlaintext()
                 .build();
-        sellerStub = SellerServiceGrpc.newBlockingStub(channel);
+
+        ManagedChannel productChannel = ManagedChannelBuilder.forAddress("localhost", 8088)
+                .usePlaintext()
+                .build();
+        customerStub = protoFiles.CustomerServiceGrpc.newBlockingStub(customerChannel);
+        productStub = protoFiles.ProductServiceGrpc.newBlockingStub(productChannel);
     }
 
     public Object doGrpcCall(int apiNum, Object request) {
 
         switch (apiNum) {
             case 0:
-                return sellerStub.register((SellerProto.PayloadRequest) request);
+                return customerStub.sellerRegister((CustomerProto.PayloadRequest) request);
             case 1:
-                return sellerStub.login((SellerProto.LoginRequest) request);
+                return customerStub.sellerLogin((CustomerProto.LoginRequest) request);
             case 2:
-                return sellerStub.logout((SellerProto.LogoutRequest) request);
+                return customerStub.sellerLogout((CustomerProto.LogoutRequest) request);
             case 3:
-                return sellerStub.getSellerRating((SellerProto.SellerRequest) request);
+                return customerStub.getSellerRating((CustomerProto.SellerRequest) request);
             case 4:
-                return sellerStub.itemSale((SellerProto.PayloadRequest) request);
+                return productStub.itemSale((ProductProto.PayloadRequest) request);
             case 5:
-                return sellerStub.changePrice((SellerProto.PayloadRequest) request);
+                return productStub.changePrice((ProductProto.PayloadRequest) request);
             case 6:
-                return sellerStub.removeItem((SellerProto.PayloadRequest) request);
+                return productStub.removeItem((ProductProto.PayloadRequest) request);
             case 7:
-                return sellerStub.displayItems((SellerProto.SellerRequest) request);
+                return productStub.displayItems((ProductProto.SellerRequest) request);
         }
 
         return null;

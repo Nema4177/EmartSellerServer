@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option java_outer_classname = "ProductProto";
+option java_package = "protoFiles";
+
+service ProductService{
+  rpc itemSearch(PayloadRequest) returns (ListResponse);
+  rpc itemAdd(PayloadRequest) returns (APIResponse);
+  rpc itemDelete(PayloadRequest) returns (APIResponse);
+  rpc clearCart(CartRequest) returns (APIResponse);
+  rpc displayCart(CartRequest) returns (ListResponse);
+  rpc purchase(PayloadRequest) returns (ListResponse);
+  rpc feedback(PayloadRequest) returns (APIResponse);
+  rpc purchaseHistory(CartRequest) returns (ListResponse);
+  rpc itemSale(PayloadRequest) returns (APIResponse);
+  rpc changePrice(PayloadRequest) returns (APIResponse);
+  rpc removeItem(PayloadRequest) returns (APIResponse);
+  rpc displayItems(SellerRequest) returns (ListResponse);
+}
+
+message APIResponse{
+  int32 status = 1;
+  string message = 2;
+}
+
+message SellerRequest{
+  int32 sellerId = 1;
+}
+
+message SellerRatingResponse{
+  int32 status = 1;
+  string message = 2;
+  int32 thumbsUp = 3;
+  int32 thumbsDown = 4;
+}
+
+message PayloadRequest{
+  string payload = 1;
+  int32 id = 2;
+}
+
+message ListResponse{
+  int32 status = 1;
+  string message = 2;
+  string responsePayload = 3;
+}
+
+message CartRequest{
+  int32 buyerId = 1;
+}
