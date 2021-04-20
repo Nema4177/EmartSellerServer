@@ -103,7 +103,11 @@ public class SellerController {
 		ProductProto.PayloadRequest payloadRequest = ProductProto.PayloadRequest.newBuilder()
 				.setPayload(input.toString()).setId(sellerId).build();
 		ProductProto.APIResponse response = (ProductProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(4, payloadRequest);
-
+		if ( response.getStatus() == HttpStatus.RESET_CONTENT.value()) {
+			System.out.println("new endpoint" + response.getMessage());
+			this.sellerGrpcHelperService.changeEndPoint(response.getMessage());
+			response = (ProductProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(4, payloadRequest);
+		}
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
@@ -116,7 +120,11 @@ public class SellerController {
 		ProductProto.PayloadRequest payloadRequest = ProductProto.PayloadRequest.newBuilder()
 				.setPayload(input.toString()).setId(sellerId).build();
 		ProductProto.APIResponse response = (ProductProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(5, payloadRequest);
-		
+		if ( response.getStatus() == HttpStatus.RESET_CONTENT.value()) {
+			System.out.println("new endpoint" + response.getMessage());
+			this.sellerGrpcHelperService.changeEndPoint(response.getMessage());
+			response = (ProductProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(5, payloadRequest);
+		}
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
 		
@@ -130,7 +138,13 @@ public class SellerController {
 		ProductProto.PayloadRequest payloadRequest = ProductProto.PayloadRequest.newBuilder()
 				.setPayload(input.toString()).setId(sellerId).build();
 		ProductProto.APIResponse response = (ProductProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(6, payloadRequest);
-		
+
+		if ( response.getStatus() == HttpStatus.RESET_CONTENT.value()) {
+			System.out.println("new endpoint" + response.getMessage());
+			this.sellerGrpcHelperService.changeEndPoint(response.getMessage());
+			response = (ProductProto.APIResponse) this.sellerGrpcHelperService.doGrpcCall(6, payloadRequest);
+		}
+
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
 		
@@ -143,11 +157,15 @@ public class SellerController {
 
 		ProductProto.SellerRequest sellerRequest = ProductProto.SellerRequest.newBuilder().setSellerId(sellerId).build();
 		ProductProto.ListResponse response = (ProductProto.ListResponse) this.sellerGrpcHelperService.doGrpcCall(7, sellerRequest);
-		
+
+		if ( response.getStatus() == HttpStatus.RESET_CONTENT.value()) {
+			System.out.println("new endpoint" + response.getMessage());
+			this.sellerGrpcHelperService.changeEndPoint(response.getMessage());
+			response = (ProductProto.ListResponse) this.sellerGrpcHelperService.doGrpcCall(7, sellerRequest);
+		}
 		entity.put(Constants.response_status_key, response.getStatus());
 		entity.put(Constants.response_message_key, response.getMessage());
 		entity.put(Constants.response_itemsList_key, response.getResponsePayload());
-
 		return new ResponseEntity<JSONObject>(entity, HttpStatus.OK);
 	}
 }
