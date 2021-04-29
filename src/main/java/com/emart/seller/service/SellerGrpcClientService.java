@@ -19,7 +19,7 @@ public class SellerGrpcClientService {
     private ProductServiceGrpc.ProductServiceBlockingStub productStub;
 
     private List<String> productBackendIPs = new ArrayList<String>(){{
-        add("35.193.126.223");
+        add("34.72.49.113");
         add("34.67.41.92");
         add("34.66.239.61");
         add("35.224.132.180");
@@ -27,7 +27,7 @@ public class SellerGrpcClientService {
     }};
 
     private List<String> customerBackendIPs = new ArrayList<String>(){{
-        add("35.193.126.223");
+        add("34.72.49.113");
         add("34.67.41.92");
         add("34.66.239.61");
         add("35.224.132.180");
